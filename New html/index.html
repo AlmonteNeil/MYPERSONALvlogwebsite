@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neil Almonte | Personal Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #4f46e5;
+}
+
+section {
+    padding-top: 140px;
+    padding-bottom: 120px;
+    text-align: center;
+    position: relative;
+}
+
+.section-banner {
+    width: 100%;
+    height: 250px;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.section-content {
+    position: relative;
+    max-width: 800px;
+    margin: -100px auto 0 auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 40px 30px 30px 30px;
+    z-index: 1;
+}
+
+.profile-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: -120px auto 20px auto;
+    z-index: 2;
+}
+
+.profile-container::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    width: 1000px;
+    height: 315px;
+    background-image: url('images/planes.jpg');
+    background-size: cover;
+    background-position:center;
+    border-radius:0;
+    opacity:0.4;
+    transform:translate(-50%,-50%);
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4f46e5;
+    position: relative;
+    z-index: 1;
+    opacity: 0.95;
+}
+
+.section-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.section-content h1 span {
+    color: #4f46e5;
+}
+
+.section-content p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn-outline {
+    border: 2px solid #4f46e5;
+    color: #4f46e5;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.btn-solid {
+    background: #4f46e5;
+    color: white;
+}
+
+.btn-solid:hover {
+    background: #4338ca;
+}
+
+.contact {
+    margin-top: 60px;
+}
+
+.contact h3 {
+    font-size: 22px;
+}
+
+.contact a {
+    color: #4f46e5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+    <span class="nav-title">MyBlog</span>
+    <div class="nav-links">
+      <a href="landingpage.html">Home</a>
+      <a href="biography.html">Biography</a>
+      <a href="Blog1.html">Blog</a>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="section-banner"></div>
+
+  <div class="profile-container">
+    <img src="images/neil3.jpg" alt="Photo of Neil Almonte" class="profile-pic">
+  </div>
+
+  <div class="section-content">
+    <div class="buttons"><a href="biography.html" class="btn-outline">About Me</a></div>
+
+    <h1>Welcome to My <span>Personal Website</span></h1>
+
+    <p style="color: #808080;">
+      This website contains my biography and personal blogs about technology,
+      football, and my journey as a student-athlete.
+    </p>
+
+    <div class="buttons">
+      <a href="Blog1.html" class="btn-solid">Blog 1 Technology</a>
+      <a href="Blog2.html" class="btn-solid">Blog 2 Football Journey</a>
+      <a href="Blog3.html" class="btn-solid">Blog 3 Student Athlete</a>
+    </div>
+
+    
+   <!-- <div>
+    <h1>Video Presentation</h1>
+    <p style="color: #808080;">
+        A glimpse into my work
+    </p>
+    <video poster="images/neil3(1).jpg" width="640" height="360" controls>
+        <source src="video/vlog.mp4">
+    </video>
+</div>-->
+   
+
+    <div class="contact">
+      <h3>Contact Me</h3>
+      <p>
+        Email:
+        <a href="mailto:almonte.neil@ue.edu.ph">almonte.neil@ue.edu.ph</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Neil Almonte | Landing Page</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
